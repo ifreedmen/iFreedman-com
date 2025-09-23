@@ -5,6 +5,7 @@ Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, a
 
 This repository includes tools to automate the creation of the iFreedmen Creative Suite repositories:
 
+- **ifreedman-com** — iFreedmen Creative Suite (Flagship Hub)
 - **ifreedmen-net** — Community Network
 - **ifreedmen-info** — Research & Education  
 - **ifreedmen-shop** — Community Marketplace (Semi Nerd)
