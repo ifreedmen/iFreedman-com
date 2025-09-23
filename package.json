@@ -4,6 +4,8 @@
   "description": "Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.",
   "main": "create-repos.js",
   "scripts": {
+    "dev": "node dev-server.js",
+    "build": "node build.js",
     "help": "node create-repos.js",
     "guide": "node create-repos.js instructions",
     "generate": "node create-repos.js all",

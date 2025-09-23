@@ -1,5 +1,12 @@
-# iFreedman.com-iFreedmen-Creative-Suite-Collection-
-Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.
+# iFreedmen Creative Suite
+Flagship hub for sovereignty, commerce, culture, and communications.  
+Links: [Community](https://ifreedmen.net) | [Research](https://ifreedmen.info) | [Shop](https://ifreedmen.shop) | [Store](https://ifreedmen.store)
+
+## Dev
+npm install && npm run dev  
+
+## Build & Deploy
+npm run build (outputs to dist/) → GitHub Pages
 
 ## Repository Creation Automation
 
