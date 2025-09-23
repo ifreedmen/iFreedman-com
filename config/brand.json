@@ -1,0 +1,57 @@
+{
+  "name": "iFreedmen Creative Suite",
+  "description": "Flagship hub for sovereignty, culture, commerce, and communications",
+  "colors": {
+    "primary": "#2c5530",
+    "secondary": "#8b4513",
+    "accent": "#d4af37",
+    "background": "#ffffff",
+    "text": "#2c2c2c",
+    "muted": "#6c757d"
+  },
+  "typography": {
+    "fontFamily": {
+      "heading": "Georgia, serif",
+      "body": "system-ui, -apple-system, sans-serif"
+    },
+    "fontSizes": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "2rem",
+      "4xl": "2.5rem"
+    }
+  },
+  "domains": {
+    "main": "ifreedman.com",
+    "network": "ifreedmen.net",
+    "info": "ifreedmen.info",
+    "shop": "ifreedmen.shop",
+    "store": "ifreedmen.store"
+  },
+  "navigation": [
+    {
+      "label": "Network",
+      "url": "https://ifreedmen.net",
+      "description": "Community and connections"
+    },
+    {
+      "label": "Info",
+      "url": "https://ifreedmen.info",
+      "description": "Resources and information"
+    },
+    {
+      "label": "Shop",
+      "url": "https://ifreedmen.shop",
+      "description": "Products and services"
+    },
+    {
+      "label": "Store",
+      "url": "https://ifreedmen.store",
+      "description": "Digital marketplace"
+    }
+  ]
+}
