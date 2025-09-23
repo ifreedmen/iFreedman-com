@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFreedmen Repository Creation Helper</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 40px; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .repo-card { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 20px 0; background: #f9f9f9; }
+        .repo-header { color: #0366d6; font-size: 1.5em; margin-bottom: 10px; }
+        .field-group { margin: 15px 0; }
+        .field-label { font-weight: bold; margin-bottom: 5px; display: block; }
+        .copy-button { background: #0366d6; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+        .copy-button:hover { background: #0256cc; }
+        textarea, input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; }
+        .general-settings { background: #e6f3ff; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .post-steps { background: #fff3cd; padding: 20px; border-radius: 8px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>iFreedmen Creative Suite Repository Creation Helper</h1>
+        
+        <div class="general-settings">
+            <h2>General Settings (use for all repositories)</h2>
+            <ul>
+                <li><strong>Owner:</strong> ifreedmen</li>
+                <li><strong>Visibility:</strong> Public</li>
+                <li><strong>Add README:</strong> ✓ On</li>
+                <li><strong>Add .gitignore:</strong> Node</li>
+                <li><strong>Add license:</strong> MIT License</li>
+            </ul>
+        </div>
+
+        
+        <div class="repo-card">
+            <div class="repo-header">2) ifreedmen-net — Community Network</div>
+            
+            <div class="field-group">
+                <label class="field-label">Repository name:</label>
+                <input type="text" value="ifreedmen-net" readonly onclick="this.select()">
+                <button class="copy-button" onclick="copyToClipboard('ifreedmen-net')">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Description:</label>
+                <textarea rows="3" readonly onclick="this.select()">Community hub for engagement, collaboration, directories, and events. Digital town hall for Freedmen worldwide. Static deploy via GitHub Pages.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Community hub for engagement, collaboration, directories, and events. Digital town hall for Freedmen worldwide. Static deploy via GitHub Pages.`)">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Copilot Prompt:</label>
+                <textarea rows="4" readonly onclick="this.select()">Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.`)">Copy</button>
+            </div>
+        </div>
+        
+        <div class="repo-card">
+            <div class="repo-header">3) ifreedmen-info — Research & Education</div>
+            
+            <div class="field-group">
+                <label class="field-label">Repository name:</label>
+                <input type="text" value="ifreedmen-info" readonly onclick="this.select()">
+                <button class="copy-button" onclick="copyToClipboard('ifreedmen-info')">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Description:</label>
+                <textarea rows="3" readonly onclick="this.select()">Research/education portal: lineage guides, treaties, legal references. Static search index. Future API stubs for identity verification.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Research/education portal: lineage guides, treaties, legal references. Static search index. Future API stubs for identity verification.`)">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Copilot Prompt:</label>
+                <textarea rows="4" readonly onclick="this.select()">Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.`)">Copy</button>
+            </div>
+        </div>
+        
+        <div class="repo-card">
+            <div class="repo-header">4) ifreedmen-shop — Community Marketplace (Semi Nerd)</div>
+            
+            <div class="field-group">
+                <label class="field-label">Repository name:</label>
+                <input type="text" value="ifreedmen-shop" readonly onclick="this.select()">
+                <button class="copy-button" onclick="copyToClipboard('ifreedmen-shop')">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Description:</label>
+                <textarea rows="3" readonly onclick="this.select()">Open marketplace for Freedmen entrepreneurs and grassroots SaaS (Semi Nerd co-brand). Fee splits reinvested into the community. Next.js static export.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Open marketplace for Freedmen entrepreneurs and grassroots SaaS (Semi Nerd co-brand). Fee splits reinvested into the community. Next.js static export.`)">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Copilot Prompt:</label>
+                <textarea rows="4" readonly onclick="this.select()">Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.`)">Copy</button>
+            </div>
+        </div>
+        
+        <div class="repo-card">
+            <div class="repo-header">5) ifreedmen-store — Internal Brand & Cultural Regalia</div>
+            
+            <div class="field-group">
+                <label class="field-label">Repository name:</label>
+                <input type="text" value="ifreedmen-store" readonly onclick="this.select()">
+                <button class="copy-button" onclick="copyToClipboard('ifreedmen-store')">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Description:</label>
+                <textarea rows="3" readonly onclick="this.select()">Official iFreedmen regalia store. Curated catalog, limited drops, cultural artifacts. Next.js static export for GitHub Pages.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Official iFreedmen regalia store. Curated catalog, limited drops, cultural artifacts. Next.js static export for GitHub Pages.`)">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Copilot Prompt:</label>
+                <textarea rows="4" readonly onclick="this.select()">Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.`)">Copy</button>
+            </div>
+        </div>
+        
+        
+        <div class="post-steps">
+            <h2>Post-Creation Steps</h2>
+            <ol>
+                <li>Open each new repo → Settings → Pages</li>
+                <li>When Copilot opens the PR, review the file tree + README</li>
+                <li>Merge once the Pages workflow passes</li>
+                <li>Add custom domains in Settings → Pages when ready</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Visual feedback could be added here
+                console.log('Copied to clipboard:', text.substring(0, 50) + '...');
+            });
+        }
+    </script>
+</body>
+</html>
