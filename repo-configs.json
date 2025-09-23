@@ -1,0 +1,56 @@
+{
+  "repositories": [
+    {
+      "name": "ifreedmen-net",
+      "title": "Community Network",
+      "description": "Community hub for engagement, collaboration, directories, and events. Digital town hall for Freedmen worldwide. Static deploy via GitHub Pages.",
+      "copilot_prompt": "Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.",
+      "settings": {
+        "owner": "ifreedmen",
+        "visibility": "public",
+        "add_readme": true,
+        "gitignore_template": "Node",
+        "license_template": "mit"
+      }
+    },
+    {
+      "name": "ifreedmen-info",
+      "title": "Research & Education",
+      "description": "Research/education portal: lineage guides, treaties, legal references. Static search index. Future API stubs for identity verification.",
+      "copilot_prompt": "Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.",
+      "settings": {
+        "owner": "ifreedmen",
+        "visibility": "public",
+        "add_readme": true,
+        "gitignore_template": "Node",
+        "license_template": "mit"
+      }
+    },
+    {
+      "name": "ifreedmen-shop",
+      "title": "Community Marketplace (Semi Nerd)",
+      "description": "Open marketplace for Freedmen entrepreneurs and grassroots SaaS (Semi Nerd co-brand). Fee splits reinvested into the community. Next.js static export.",
+      "copilot_prompt": "Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.",
+      "settings": {
+        "owner": "ifreedmen",
+        "visibility": "public",
+        "add_readme": true,
+        "gitignore_template": "Node",
+        "license_template": "mit"
+      }
+    },
+    {
+      "name": "ifreedmen-store",
+      "title": "Internal Brand & Cultural Regalia",
+      "description": "Official iFreedmen regalia store. Curated catalog, limited drops, cultural artifacts. Next.js static export for GitHub Pages.",
+      "copilot_prompt": "Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.",
+      "settings": {
+        "owner": "ifreedmen",
+        "visibility": "public",
+        "add_readme": true,
+        "gitignore_template": "Node",
+        "license_template": "mit"
+      }
+    }
+  ]
+}

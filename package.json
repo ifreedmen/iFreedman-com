@@ -1,0 +1,31 @@
+{
+  "name": "ifreedmen-creative-suite-collection",
+  "version": "1.0.0",
+  "description": "Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.",
+  "main": "create-repos.js",
+  "scripts": {
+    "help": "node create-repos.js",
+    "guide": "node create-repos.js instructions",
+    "generate": "node create-repos.js all",
+    "html": "node create-repos.js html && echo 'Open repo-creation-helper.html in your browser'",
+    "markdown": "node create-repos.js markdown",
+    "validate": "node -c create-repos.js && echo 'Scripts are valid'"
+  },
+  "keywords": [
+    "ifreedmen",
+    "creative-suite",
+    "repository-automation",
+    "github-pages",
+    "static-sites"
+  ],
+  "author": "iFreedmen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-/issues"
+  },
+  "homepage": "https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-#readme"
+}
