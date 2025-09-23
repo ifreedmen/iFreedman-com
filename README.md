@@ -39,3 +39,10 @@ npm run markdown
 3. Follow post-creation steps for GitHub Pages setup
 
 See [REPOSITORY-CREATION-GUIDE.md](./REPOSITORY-CREATION-GUIDE.md) for detailed instructions.
+
+## Architecture Documentation
+
+📍 **[Architecture Overview](./docs/ARCHITECTURE.md)** - View the complete ecosystem diagrams showing:
+- Infrastructure layout with all 5 repositories and domain mapping
+- Development workflow from Copilot to live deployment
+- Technology stack and repository relationships
