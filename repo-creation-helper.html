@@ -35,6 +35,28 @@
 
         
         <div class="repo-card">
+            <div class="repo-header">1) ifreedman-com — iFreedmen Creative Suite</div>
+            
+            <div class="field-group">
+                <label class="field-label">Repository name:</label>
+                <input type="text" value="ifreedman-com" readonly onclick="this.select()">
+                <button class="copy-button" onclick="copyToClipboard('ifreedman-com')">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Description:</label>
+                <textarea rows="3" readonly onclick="this.select()">Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.`)">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Copilot Prompt:</label>
+                <textarea rows="4" readonly onclick="this.select()">Create branch scaffold/initial. Add folders: .github/workflows, public, src, content, config, scripts. Add Pages workflow to build with Node 20 and publish dist (copy public→dist if no build). Add README.md with structure, local dev, build/export, and links to ifreedmen.net/info/shop/store. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create branch scaffold/initial. Add folders: .github/workflows, public, src, content, config, scripts. Add Pages workflow to build with Node 20 and publish dist (copy public→dist if no build). Add README.md with structure, local dev, build/export, and links to ifreedmen.net/info/shop/store. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.`)">Copy</button>
+            </div>
+        </div>
+        
+        <div class="repo-card">
             <div class="repo-header">2) ifreedmen-net — Community Network</div>
             
             <div class="field-group">
@@ -51,8 +73,8 @@
             
             <div class="field-group">
                 <label class="field-label">Copilot Prompt:</label>
-                <textarea rows="4" readonly onclick="this.select()">Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.</textarea>
-                <button class="copy-button" onclick="copyToClipboard(`Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.`)">Copy</button>
+                <textarea rows="4" readonly onclick="this.select()">Create branch scaffold/initial. Static site scaffold with public,src,content/directory,content/events,config/nav.json. Seed 2 directory items + 1 event. Add Pages workflow (Node 20) publishing dist. Add README (purpose, data locations, how to add entries). Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create branch scaffold/initial. Static site scaffold with public,src,content/directory,content/events,config/nav.json. Seed 2 directory items + 1 event. Add Pages workflow (Node 20) publishing dist. Add README (purpose, data locations, how to add entries). Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.`)">Copy</button>
             </div>
         </div>
         
@@ -73,8 +95,8 @@
             
             <div class="field-group">
                 <label class="field-label">Copilot Prompt:</label>
-                <textarea rows="4" readonly onclick="this.select()">Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.</textarea>
-                <button class="copy-button" onclick="copyToClipboard(`Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.`)">Copy</button>
+                <textarea rows="4" readonly onclick="this.select()">Create branch scaffold/initial. Add public,src,content/treaties,content/lineage,content/legal,src/api (stubs),config/search-index.json. Add one sample article with front-matter. Pages workflow (Node 20) to dist. README explains content model + search index. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create branch scaffold/initial. Add public,src,content/treaties,content/lineage,content/legal,src/api (stubs),config/search-index.json. Add one sample article with front-matter. Pages workflow (Node 20) to dist. README explains content model + search index. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.`)">Copy</button>
             </div>
         </div>
         
@@ -95,8 +117,8 @@
             
             <div class="field-group">
                 <label class="field-label">Copilot Prompt:</label>
-                <textarea rows="4" readonly onclick="this.select()">Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.</textarea>
-                <button class="copy-button" onclick="copyToClipboard(`Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.`)">Copy</button>
+                <textarea rows="4" readonly onclick="this.select()">Create branch scaffold/initial. Init Next.js app; static export to dist. Add content/vendors,content/products with JSON schemas; config/commerce.json (platform 5, reinvest 3). Add simple listing page with ProductCard. Include Pages workflow (Node 20). README with scripts (dev,build export). Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create branch scaffold/initial. Init Next.js app; static export to dist. Add content/vendors,content/products with JSON schemas; config/commerce.json (platform 5, reinvest 3). Add simple listing page with ProductCard. Include Pages workflow (Node 20). README with scripts (dev,build export). Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.`)">Copy</button>
             </div>
         </div>
         
@@ -117,8 +139,8 @@
             
             <div class="field-group">
                 <label class="field-label">Copilot Prompt:</label>
-                <textarea rows="4" readonly onclick="this.select()">Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.</textarea>
-                <button class="copy-button" onclick="copyToClipboard(`Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.`)">Copy</button>
+                <textarea rows="4" readonly onclick="this.select()">Create branch scaffold/initial. Init Next.js; static export to dist. Add content/products (curated SKUs), config/drops.json (add one sample drop), and a simple DropTimer component. Include Pages workflow (Node 20). README with structure and release steps. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create branch scaffold/initial. Init Next.js; static export to dist. Add content/products (curated SKUs), config/drops.json (add one sample drop), and a simple DropTimer component. Include Pages workflow (Node 20). README with structure and release steps. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.`)">Copy</button>
             </div>
         </div>
         

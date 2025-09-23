@@ -11,6 +11,25 @@
 ---
 
 
+## 1) ifreedman-com — iFreedmen Creative Suite
+
+### Repository name:
+```
+ifreedman-com
+```
+
+### Description (paste):
+```
+Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.
+```
+
+### Copilot Prompt (paste):
+```
+Create branch scaffold/initial. Add folders: .github/workflows, public, src, content, config, scripts. Add Pages workflow to build with Node 20 and publish dist (copy public→dist if no build). Add README.md with structure, local dev, build/export, and links to ifreedmen.net/info/shop/store. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.
+```
+
+---
+
 ## 2) ifreedmen-net — Community Network
 
 ### Repository name:
@@ -25,7 +44,7 @@ Community hub for engagement, collaboration, directories, and events. Digital to
 
 ### Copilot Prompt (paste):
 ```
-Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.
+Create branch scaffold/initial. Static site scaffold with public,src,content/directory,content/events,config/nav.json. Seed 2 directory items + 1 event. Add Pages workflow (Node 20) publishing dist. Add README (purpose, data locations, how to add entries). Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -44,7 +63,7 @@ Research/education portal: lineage guides, treaties, legal references. Static se
 
 ### Copilot Prompt (paste):
 ```
-Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.
+Create branch scaffold/initial. Add public,src,content/treaties,content/lineage,content/legal,src/api (stubs),config/search-index.json. Add one sample article with front-matter. Pages workflow (Node 20) to dist. README explains content model + search index. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -63,7 +82,7 @@ Open marketplace for Freedmen entrepreneurs and grassroots SaaS (Semi Nerd co-br
 
 ### Copilot Prompt (paste):
 ```
-Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.
+Create branch scaffold/initial. Init Next.js app; static export to dist. Add content/vendors,content/products with JSON schemas; config/commerce.json (platform 5, reinvest 3). Add simple listing page with ProductCard. Include Pages workflow (Node 20). README with scripts (dev,build export). Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -82,7 +101,7 @@ Official iFreedmen regalia store. Curated catalog, limited drops, cultural artif
 
 ### Copilot Prompt (paste):
 ```
-Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.
+Create branch scaffold/initial. Init Next.js; static export to dist. Add content/products (curated SKUs), config/drops.json (add one sample drop), and a simple DropTimer component. Include Pages workflow (Node 20). README with structure and release steps. Commit and open PR "feat: initial scaffold" with checklist + labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -97,6 +116,7 @@ Init Next.js with static export to dist. Add /content/products (curated SKUs) an
 
 ## Repository URLs (after creation)
 
+- [ifreedman-com](https://github.com/ifreedmen/ifreedman-com) — iFreedmen Creative Suite
 - [ifreedmen-net](https://github.com/ifreedmen/ifreedmen-net) — Community Network
 - [ifreedmen-info](https://github.com/ifreedmen/ifreedmen-info) — Research & Education
 - [ifreedmen-shop](https://github.com/ifreedmen/ifreedmen-shop) — Community Marketplace (Semi Nerd)

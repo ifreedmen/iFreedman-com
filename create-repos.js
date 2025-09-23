@@ -27,7 +27,7 @@ function generateInstructions() {
   console.log();
   
   config.repositories.forEach((repo, index) => {
-    console.log(`${index + 2}) ${repo.name} — ${repo.title}`);
+    console.log(`${index + 1}) ${repo.name} — ${repo.title}`);
     console.log('-'.repeat(50));
     console.log();
     
@@ -94,7 +94,7 @@ function generateWebForm() {
 
         ${repos.map((repo, index) => `
         <div class="repo-card">
-            <div class="repo-header">${index + 2}) ${repo.name} — ${repo.title}</div>
+            <div class="repo-header">${index + 1}) ${repo.name} — ${repo.title}</div>
             
             <div class="field-group">
                 <label class="field-label">Repository name:</label>
@@ -158,7 +158,7 @@ function generateMarkdownGuide() {
 ---
 
 ${repos.map((repo, index) => `
-## ${index + 2}) ${repo.name} — ${repo.title}
+## ${index + 1}) ${repo.name} — ${repo.title}
 
 ### Repository name:
 \`\`\`
