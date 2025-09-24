@@ -1,6 +1,12 @@
 # iFreedman.com-iFreedmen-Creative-Suite-Collection-
 Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.
 
+## Official Logo
+
+![iFreedmen Official Logo](iFreedmen-logo-official.png)
+
+**Important**: The `iFreedmen-logo-official.png` logo must be used for all internal and external correspondence. This is the official logo with proper transparent background and optimized formatting for professional use.
+
 ## Repository Creation Automation
 
 This repository includes tools to automate the creation of the iFreedmen Creative Suite repositories:
