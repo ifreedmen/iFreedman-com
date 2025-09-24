@@ -1,0 +1,16 @@
+{
+  "name": "static-site-template",
+  "version": "1.0.0",
+  "description": "Static site template for iFreedmen Creative Suite",
+  "scripts": {
+    "dev": "npx serve src -l 3000 --watch",
+    "build": "npm run build:copy && npm run build:process",
+    "build:copy": "cp -r public/* dist/ 2>/dev/null || mkdir -p dist",
+    "build:process": "mkdir -p dist && cp -r src/* dist/",
+    "preview": "npx serve dist -l 4000",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

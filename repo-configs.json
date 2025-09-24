@@ -4,7 +4,7 @@
       "name": "ifreedmen-net",
       "title": "Community Network",
       "description": "Community hub for engagement, collaboration, directories, and events. Digital town hall for Freedmen worldwide. Static deploy via GitHub Pages.",
-      "copilot_prompt": "Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.",
+      "copilot_prompt": "Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy on push to main + PR preview). Add public/, src/, content/directory/, content/events/, config/nav.json, package.json with dev server. Seed 2 directory entries + 1 event. Add README with dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.",
       "settings": {
         "owner": "ifreedmen",
         "visibility": "public",
@@ -17,7 +17,7 @@
       "name": "ifreedmen-info",
       "title": "Research & Education",
       "description": "Research/education portal: lineage guides, treaties, legal references. Static search index. Future API stubs for identity verification.",
-      "copilot_prompt": "Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.",
+      "copilot_prompt": "Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add public/, src/, content/treaties/, content/lineage/, content/legal/, src/api/, config/search-index.json, package.json with dev server and build scripts. Add 1 sample article with front-matter. Include README with content model, search index, and dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.",
       "settings": {
         "owner": "ifreedmen",
         "visibility": "public",
@@ -30,7 +30,7 @@
       "name": "ifreedmen-shop",
       "title": "Community Marketplace (Semi Nerd)",
       "description": "Open marketplace for Freedmen entrepreneurs and grassroots SaaS (Semi Nerd co-brand). Fee splits reinvested into the community. Next.js static export.",
-      "copilot_prompt": "Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.",
+      "copilot_prompt": "Create branch scaffold/initial. Init Next.js with static export config. Add .github/workflows/pages.yml (Node 20, next build && next export to dist/, deploy main + preview PRs). Add content/vendors/, content/products/ with JSON schemas, config/commerce.json (5% platform, 3% reinvest). Create ProductCard component and listing page. Add package.json with dev server. Include README with dev workflow and scripts. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.",
       "settings": {
         "owner": "ifreedmen",
         "visibility": "public",
@@ -43,7 +43,7 @@
       "name": "ifreedmen-store",
       "title": "Internal Brand & Cultural Regalia",
       "description": "Official iFreedmen regalia store. Curated catalog, limited drops, cultural artifacts. Next.js static export for GitHub Pages.",
-      "copilot_prompt": "Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.",
+      "copilot_prompt": "Create branch scaffold/initial. Init Next.js with static export config. Add .github/workflows/pages.yml (Node 20, next build && next export to dist/, deploy main + preview PRs). Add content/products/ (curated SKUs), config/drops.json (1 sample drop), DropTimer component. Create product grid and detail pages. Add package.json with dev server. Include README with structure, release steps, and dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.",
       "settings": {
         "owner": "ifreedmen",
         "visibility": "public",

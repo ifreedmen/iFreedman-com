@@ -25,7 +25,7 @@ Community hub for engagement, collaboration, directories, and events. Digital to
 
 ### Copilot Prompt (paste):
 ```
-Scaffold a static site with /content/directory, /content/events, /src, /config/nav.json. Seed 2 sample directory entries and 1 event. Include Pages workflow to deploy dist/. Open PR from scaffold/initial with checklist and labels scope:infra type:scaffold.
+Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy on push to main + PR preview). Add public/, src/, content/directory/, content/events/, config/nav.json, package.json with dev server. Seed 2 directory entries + 1 event. Add README with dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -44,7 +44,7 @@ Research/education portal: lineage guides, treaties, legal references. Static se
 
 ### Copilot Prompt (paste):
 ```
-Create folders /content/treaties /content/lineage /content/legal /src/api (stubs) /config/search-index.json. Add 1 sample article with front-matter. Add Pages workflow to publish dist/. Open PR from scaffold/initial; include README explaining content model and search index.
+Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add public/, src/, content/treaties/, content/lineage/, content/legal/, src/api/, config/search-index.json, package.json with dev server and build scripts. Add 1 sample article with front-matter. Include README with content model, search index, and dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -63,7 +63,7 @@ Open marketplace for Freedmen entrepreneurs and grassroots SaaS (Semi Nerd co-br
 
 ### Copilot Prompt (paste):
 ```
-Init Next.js. Add /content/vendors and /content/products with JSON schemas, /config/commerce.json (5% platform, 3% reinvest). Build exports to dist (next build && next export). Add ProductCard and simple listing page. Add Pages workflow. PR from scaffold/initial.
+Create branch scaffold/initial. Init Next.js with static export config. Add .github/workflows/pages.yml (Node 20, next build && next export to dist/, deploy main + preview PRs). Add content/vendors/, content/products/ with JSON schemas, config/commerce.json (5% platform, 3% reinvest). Create ProductCard component and listing page. Add package.json with dev server. Include README with dev workflow and scripts. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.
 ```
 
 ---
@@ -82,7 +82,7 @@ Official iFreedmen regalia store. Curated catalog, limited drops, cultural artif
 
 ### Copilot Prompt (paste):
 ```
-Init Next.js with static export to dist. Add /content/products (curated SKUs) and /config/drops.json with one sample drop. Create simple grid, product page, and DropTimer component. Include Pages workflow and README. Open PR from scaffold/initial.
+Create branch scaffold/initial. Init Next.js with static export config. Add .github/workflows/pages.yml (Node 20, next build && next export to dist/, deploy main + preview PRs). Add content/products/ (curated SKUs), config/drops.json (1 sample drop), DropTimer component. Create product grid and detail pages. Add package.json with dev server. Include README with structure, release steps, and dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.
 ```
 
 ---
