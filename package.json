@@ -9,7 +9,10 @@
     "generate": "node create-repos.js all",
     "html": "node create-repos.js html && echo 'Open repo-creation-helper.html in your browser'",
     "markdown": "node create-repos.js markdown",
-    "validate": "node -c create-repos.js && echo 'Scripts are valid'"
+    "validate": "node -c create-repos.js && echo 'Scripts are valid'",
+    "enhanced": "node enhanced-setup.js enhanced",
+    "stable-preview": "node enhanced-setup.js all-enhanced",
+    "templates": "node enhanced-setup.js templates"
   },
   "keywords": [
     "ifreedmen",
