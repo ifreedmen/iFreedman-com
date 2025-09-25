@@ -2,7 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 // Load brand configuration
-const brandConfig = JSON.parse(fs.readFileSync('./config/brand.json', 'utf8'));
+let brandConfig;
+try {
+  brandConfig = JSON.parse(fs.readFileSync('./config/brand.json', 'utf8'));
+} catch (err) {
+  console.error('❌ Failed to load brand configuration from ./config/brand.json.');
+  console.error('Reason:', err.message);
+  process.exit(1);
+}
 
 // Create public directory if it doesn't exist
 if (!fs.existsSync('./public')) {
