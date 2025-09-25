@@ -24,9 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           const href = this.getAttribute('href');
-          let target = null;
+          let target;
           try {
-            target = document.querySelector(href);
+            const queried = document.querySelector(href);
+            target = queried;
           } catch (err) {
             console.error('Invalid selector for smooth scroll:', href, err);
           }
