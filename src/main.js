@@ -1,9 +1,10 @@
 // Main JavaScript for iFreedmen Creative Suite
 // Load brand configuration dynamically from config/brand.json
-let brandConfig = {};
+
 
 // Initialize navigation tracking after loading brand config
 document.addEventListener('DOMContentLoaded', function() {
+  let brandConfig;
   fetch('./config/brand.json')
     .then(response => response.json())
     .then(config => {
