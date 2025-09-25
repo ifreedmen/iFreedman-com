@@ -42,3 +42,12 @@ Official iFreedmen regalia store. Curated catalog, limited drops, cultural artif
 
 **Prompt:**  
 Create branch scaffold/initial. Init Next.js with static export config. Add .github/workflows/pages.yml (Node 20, next build && next export to dist/, deploy main + preview PRs). Add content/products/ (curated SKUs), config/drops.json (1 sample drop), DropTimer component. Create product grid and detail pages. Add package.json with dev server. Include README with structure, release steps, and dev workflow. Commit PR feat: initial scaffold with labels scope:infra,type:scaffold.  
+
+---
+
+## 6. ifreedmen-api
+**Description:**  
+API gateway for iFreedmen services including health checks, identity verification, and shared backend services. RESTful API with comprehensive documentation.  
+
+**Prompt:**  
+Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add src/routes/, src/types/, src/middleware/, tests/, docs/api/, package.json with Express server and build scripts. Implement /health endpoint using shared HealthCheck type. Add comprehensive API documentation and test coverage. Include README with API reference, development workflow, and deployment guide. Commit PR feat: initial API scaffold with labels scope:infra,type:scaffold.  

@@ -1,0 +1,48 @@
+{
+  "name": "ifreedmen-api",
+  "version": "1.0.0",
+  "description": "API gateway for iFreedmen services including health checks, identity verification, and shared backend services",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "build": "npm run test && npm run docs:build",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "docs:build": "swagger-jsdoc -d docs/swagger.config.js src/routes/*.js -o dist/api-docs.json",
+    "docs:serve": "swagger-ui-serve dist/api-docs.json",
+    "lint": "eslint src/ tests/",
+    "lint:fix": "eslint src/ tests/ --fix"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.55.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifreedmen/ifreedmen-api.git"
+  },
+  "keywords": [
+    "ifreedmen",
+    "api",
+    "express",
+    "health-check",
+    "identity-verification"
+  ],
+  "author": "iFreedmen",
+  "license": "MIT"
+}

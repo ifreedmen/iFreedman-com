@@ -36,6 +36,41 @@ Next.js configuration for static export:
 - Optimizes for GitHub Pages deployment
 - Handles asset paths correctly
 
+### `package-api.json`
+Template package.json for API services (ifreedmen-api):
+- Express.js development server with nodemon
+- Jest testing framework with coverage
+- API documentation generation with Swagger
+- Linting and formatting tools
+
+### `health-types.js`
+Shared HealthCheck type definition:
+- Standardized health status reporting
+- Consistent API response structure
+- TypeScript-style documentation
+- Utility functions for health checks
+
+### `health-route.js`
+Express.js health endpoint implementation:
+- RESTful /health endpoint
+- Swagger API documentation
+- Memory and environment monitoring
+- Error handling with proper HTTP status codes
+
+### `api-server.js`
+Express.js server template:
+- Security middleware (helmet, CORS, rate limiting)
+- Compression and parsing middleware
+- Error handling and 404 responses
+- API gateway structure with versioning
+
+### `health.test.js`
+Comprehensive test suite for health endpoint:
+- Jest test framework with supertest
+- Health endpoint validation
+- Response schema testing
+- Error handling verification
+
 ## Usage Instructions
 
 1. **Create Repository**: Use the enhanced Copilot prompts from the main guide

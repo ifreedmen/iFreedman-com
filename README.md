@@ -91,7 +91,7 @@ This enhanced version ensures **stable and consistent preview pages** for all re
 
 ## 📁 Repository Structure
 
-The Creative Suite consists of 5 coordinated repositories:
+The Creative Suite consists of 6 coordinated repositories:
 
 | Repository | Purpose | Technology | Status |
 |------------|---------|------------|---------|
@@ -100,6 +100,7 @@ The Creative Suite consists of 5 coordinated repositories:
 | [ifreedmen-info](https://github.com/ifreedmen/ifreedmen-info) | Research & Education | Static Site | 📋 Ready to Create |
 | [ifreedmen-shop](https://github.com/ifreedmen/ifreedmen-shop) | Community Marketplace | Next.js | 📋 Ready to Create |
 | [ifreedmen-store](https://github.com/ifreedmen/ifreedmen-store) | Brand & Regalia | Next.js | 📋 Ready to Create |
+| [ifreedmen-api](https://github.com/ifreedmen/ifreedmen-api) | API Gateway & Services | Express.js | 📋 Ready to Create |
 
 ## 🛠️ Repository Creation Process
 

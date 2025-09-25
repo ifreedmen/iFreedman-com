@@ -87,6 +87,25 @@ Create branch scaffold/initial. Init Next.js with static export config. Add .git
 
 ---
 
+## 6) ifreedmen-api — API Gateway & Services
+
+### Repository name:
+```
+ifreedmen-api
+```
+
+### Description (paste):
+```
+API gateway for iFreedmen services including health checks, identity verification, and shared backend services. RESTful API with comprehensive documentation.
+```
+
+### Copilot Prompt (paste):
+```
+Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add src/routes/, src/types/, src/middleware/, tests/, docs/api/, package.json with Express server and build scripts. Implement /health endpoint using shared HealthCheck type. Add comprehensive API documentation and test coverage. Include README with API reference, development workflow, and deployment guide. Commit PR feat: initial API scaffold with labels scope:infra,type:scaffold.
+```
+
+---
+
 
 ## Post-Creation Steps
 
@@ -101,3 +120,4 @@ Create branch scaffold/initial. Init Next.js with static export config. Add .git
 - [ifreedmen-info](https://github.com/ifreedmen/ifreedmen-info) — Research & Education
 - [ifreedmen-shop](https://github.com/ifreedmen/ifreedmen-shop) — Community Marketplace (Semi Nerd)
 - [ifreedmen-store](https://github.com/ifreedmen/ifreedmen-store) — Internal Brand & Cultural Regalia
+- [ifreedmen-api](https://github.com/ifreedmen/ifreedmen-api) — API Gateway & Services
