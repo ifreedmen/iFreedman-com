@@ -151,6 +151,30 @@ The `templates/` directory contains:
 - **`next.config.js`**: Next.js configuration for static export
 - **`TEMPLATES.md`**: Comprehensive template documentation
 
+## 🛡️ Brand Guard CI Workflow
+
+The Brand Guard workflow automatically protects all repositories from incorrect brand/domain tokens:
+
+### ✅ **Allowed Patterns**
+- `iFreedmen` - Correct spelling with capital 'F' and 'd'
+- `ifreedmen.*` - Lowercase domains (ifreedmen.com, ifreedmen.net, etc.)
+- `@ifreedmen/*` - Social media handles (@ifreedmen/updates, etc.)
+
+### ❌ **Blocked Patterns**
+- `ifreemen` - Missing 'd' (common typo)
+- `iFreemen` - Missing 'd' with capital 'F' 
+- `ifreeman` - Missing 'd' and 'n'
+- `@ifreemen[-/]` - Incorrect social media patterns
+- `https://ifreemen.*` - Incorrect domain patterns
+
+### 🔧 **How It Works**
+1. **Automatic Scanning**: Runs on every push and pull request
+2. **File Coverage**: Scans all text files (*.md, *.js, *.json, *.html, etc.)
+3. **CI Integration**: Fails the build if forbidden tokens are found
+4. **Clear Reporting**: Shows exact files and line numbers with violations
+
+This ensures brand consistency across all iFreedmen Creative Suite repositories.
+
 ## 🎯 Development Workflow for Each Repository
 
 Once repositories are created, each will have:
