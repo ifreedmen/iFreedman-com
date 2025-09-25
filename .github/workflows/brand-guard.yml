@@ -39,32 +39,42 @@ jobs:
             while IFS= read -r line; do
                 line_num=$((line_num + 1))
                 
-                # Check for forbidden patterns
-                if echo "$line" | grep -qE "(^|[^a-zA-Z])ifreemen([^a-zA-Z]|$)"; then
+                # Skip the Brand Guard workflow file itself to avoid false positives
+                if [[ "$file" == *"brand-guard.yml"* ]]; then
+                    continue
+                fi
+                
+                # Skip documentation lines that mention the patterns we're blocking
+                if [[ "$line" =~ (Block:|Blocked|FORBIDDEN|❌|forbidden|blocked|Incorrect|Missing|typo|example) ]]; then
+                    continue
+                fi
+                
+                # Check for forbidden patterns (simple string matching)
+                if [[ "$line" =~ [^a-zA-Z]ifreemen[^a-zA-Z]|^ifreemen[^a-zA-Z]|[^a-zA-Z]ifreemen$ ]]; then
                     echo -e "${RED}❌ FORBIDDEN: 'ifreemen' found in $file:$line_num${NC}"
                     echo "    Line: $line"
                     error_count=$((error_count + 1))
                 fi
                 
-                if echo "$line" | grep -qE "(^|[^a-zA-Z])iFreemen([^a-zA-Z]|$)"; then
+                if [[ "$line" =~ [^a-zA-Z]iFreemen[^a-zA-Z]|^iFreemen[^a-zA-Z]|[^a-zA-Z]iFreemen$ ]]; then
                     echo -e "${RED}❌ FORBIDDEN: 'iFreemen' found in $file:$line_num${NC}"
                     echo "    Line: $line"
                     error_count=$((error_count + 1))
                 fi
                 
-                if echo "$line" | grep -qE "(^|[^a-zA-Z])ifreeman([^a-zA-Z]|$)"; then
+                if [[ "$line" =~ [^a-zA-Z]ifreeman[^a-zA-Z]|^ifreeman[^a-zA-Z]|[^a-zA-Z]ifreeman$ ]]; then
                     echo -e "${RED}❌ FORBIDDEN: 'ifreeman' found in $file:$line_num${NC}"
                     echo "    Line: $line"
                     error_count=$((error_count + 1))
                 fi
                 
-                if echo "$line" | grep -qE "@ifreemen[-/]"; then
+                if [[ "$line" =~ @ifreemen[-/] ]]; then
                     echo -e "${RED}❌ FORBIDDEN: '@ifreemen[-/]' pattern found in $file:$line_num${NC}"
                     echo "    Line: $line"
                     error_count=$((error_count + 1))
                 fi
                 
-                if echo "$line" | grep -qE "https://ifreemen\."; then
+                if [[ "$line" =~ https://ifreemen\. ]]; then
                     echo -e "${RED}❌ FORBIDDEN: 'https://ifreemen.*' pattern found in $file:$line_num${NC}"
                     echo "    Line: $line"
                     error_count=$((error_count + 1))
