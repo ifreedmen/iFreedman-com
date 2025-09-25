@@ -24,11 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           const href = this.getAttribute('href');
-          let target;
-          try {
+          let target = null;
+          // Validate href is a valid ID selector (starts with # and valid identifier)
+          if (href && /^#[A-Za-z_][A-Za-z0-9\-_:.]*$/.test(href)) {
             target = document.querySelector(href);
-          } catch (err) {
-            console.error('Invalid selector for smooth scroll:', href, err);
+          } else {
+            console.error('Invalid selector for smooth scroll:', href);
           }
           if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
