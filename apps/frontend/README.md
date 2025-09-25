@@ -155,7 +155,7 @@ The navigation is fully responsive with:
 
 ## 📄 License
 
-MIT License - see [LICENSE](../../LICENSE) file for details.
+MIT License.
 
 ## 🎯 Sovereignty Commitment
 
