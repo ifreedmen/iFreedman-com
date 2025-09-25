@@ -12,7 +12,11 @@
     "validate": "node -c create-repos.js && echo 'Scripts are valid'",
     "enhanced": "node enhanced-setup.js enhanced",
     "stable-preview": "node enhanced-setup.js all-enhanced",
-    "templates": "node enhanced-setup.js templates"
+    "templates": "node enhanced-setup.js templates",
+    "frontend:dev": "cd apps/frontend && npm run dev",
+    "frontend:build": "cd apps/frontend && npm run build",
+    "frontend:preview": "cd apps/frontend && npm run preview",
+    "frontend:install": "cd apps/frontend && npm install"
   },
   "keywords": [
     "ifreedmen",

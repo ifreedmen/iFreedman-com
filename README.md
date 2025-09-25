@@ -130,6 +130,35 @@ npm run preview      # Preview the built site
 # 2. Create PR = auto-build for preview/validation
 ```
 
+## 🌐 Flagship Frontend Development
+
+The `apps/frontend` directory contains the Next.js flagship site for ifreedmen.com with global navigation linking all domains:
+
+### Available Commands
+```bash
+npm run frontend:install  # Install frontend dependencies
+npm run frontend:dev      # Start development server
+npm run frontend:build    # Build for production
+npm run frontend:preview  # Preview production build locally
+```
+
+### Features
+- ✅ **Global Navigation**: Links to all iFreedmen domains (.net, .info, .shop, .store)
+- ✅ **Static Export**: Optimized for GitHub Pages deployment
+- ✅ **Responsive Design**: Mobile-friendly navigation and layout
+- ✅ **Brand Consistency**: Uses iFreedmen brand colors and styling
+- ✅ **Accessibility**: Focus management and keyboard navigation
+
+### Navigation Links
+- Home → https://ifreedmen.com
+- Network (.NET) → https://ifreedmen.net  
+- Docs/Research → https://docs.ifreedmen.com
+- Shop → https://ifreedmen.shop
+- Store → https://ifreedmen.store
+- Status → https://status.ifreedmen.com
+- API → https://api.ifreedmen.com
+- Sign In → https://id.ifreedmen.com
+
 ## 📚 Architecture Documentation
 
 📍 **[Architecture Overview](./docs/ARCHITECTURE.md)** - View the complete ecosystem diagrams showing:
