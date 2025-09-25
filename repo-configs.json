@@ -51,6 +51,19 @@
         "gitignore_template": "Node",
         "license_template": "mit"
       }
+    },
+    {
+      "name": "ifreedmen-api",
+      "title": "API Gateway & Services",
+      "description": "API gateway for iFreedmen services including health checks, identity verification, and shared backend services. RESTful API with comprehensive documentation.",
+      "copilot_prompt": "Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add src/routes/, src/types/, src/middleware/, tests/, docs/api/, package.json with Express server and build scripts. Implement /health endpoint using shared HealthCheck type. Add comprehensive API documentation and test coverage. Include README with API reference, development workflow, and deployment guide. Commit PR feat: initial API scaffold with labels scope:infra,type:scaffold.",
+      "settings": {
+        "owner": "ifreedmen",
+        "visibility": "public",
+        "add_readme": true,
+        "gitignore_template": "Node",
+        "license_template": "mit"
+      }
     }
   ]
 }

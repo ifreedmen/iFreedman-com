@@ -41,6 +41,7 @@ flowchart TD
 - **ifreedmen-info** - Research portal with lineage guides and legal references
 - **ifreedmen-shop** - Open marketplace for Freedmen entrepreneurs (Semi Nerd co-brand)
 - **ifreedmen-store** - Official regalia and cultural artifacts
+- **ifreedmen-api** - API gateway with health checks, identity verification, and shared backend services
 
 ## Development Workflow
 
@@ -100,6 +101,7 @@ flowchart LR
 ## Technology Stack
 
 - **Static Site Generation**: Next.js with static export capability
+- **API Services**: Express.js with RESTful endpoints and health monitoring
 - **Content Management**: Markdown with front-matter, JSON configurations
 - **Deployment**: GitHub Pages with GitHub Actions
 - **DNS Management**: GoDaddy with custom domain mapping
@@ -112,5 +114,6 @@ flowchart LR
 - [ifreedmen-info](https://github.com/ifreedmen/ifreedmen-info) — Research & Education
 - [ifreedmen-shop](https://github.com/ifreedmen/ifreedmen-shop) — Community Marketplace
 - [ifreedmen-store](https://github.com/ifreedmen/ifreedmen-store) — Brand & Regalia
+- [ifreedmen-api](https://github.com/ifreedmen/ifreedmen-api) — API Gateway & Services
 
 *Note: Repository links will be active once the repositories are created using the tools in this repository.*

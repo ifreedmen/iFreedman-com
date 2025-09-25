@@ -122,6 +122,28 @@
             </div>
         </div>
         
+        <div class="repo-card">
+            <div class="repo-header">6) ifreedmen-api — API Gateway & Services</div>
+            
+            <div class="field-group">
+                <label class="field-label">Repository name:</label>
+                <input type="text" value="ifreedmen-api" readonly onclick="this.select()">
+                <button class="copy-button" onclick="copyToClipboard('ifreedmen-api')">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Description:</label>
+                <textarea rows="3" readonly onclick="this.select()">API gateway for iFreedmen services including health checks, identity verification, and shared backend services. RESTful API with comprehensive documentation.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`API gateway for iFreedmen services including health checks, identity verification, and shared backend services. RESTful API with comprehensive documentation.`)">Copy</button>
+            </div>
+            
+            <div class="field-group">
+                <label class="field-label">Copilot Prompt:</label>
+                <textarea rows="4" readonly onclick="this.select()">Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add src/routes/, src/types/, src/middleware/, tests/, docs/api/, package.json with Express server and build scripts. Implement /health endpoint using shared HealthCheck type. Add comprehensive API documentation and test coverage. Include README with API reference, development workflow, and deployment guide. Commit PR feat: initial API scaffold with labels scope:infra,type:scaffold.</textarea>
+                <button class="copy-button" onclick="copyToClipboard(`Create branch scaffold/initial. Add .github/workflows/pages.yml (Node 20, build to dist/, deploy main + preview PRs). Add src/routes/, src/types/, src/middleware/, tests/, docs/api/, package.json with Express server and build scripts. Implement /health endpoint using shared HealthCheck type. Add comprehensive API documentation and test coverage. Include README with API reference, development workflow, and deployment guide. Commit PR feat: initial API scaffold with labels scope:infra,type:scaffold.`)">Copy</button>
+            </div>
+        </div>
+        
         
         <div class="post-steps">
             <h2>Post-Creation Steps</h2>
