@@ -78,7 +78,9 @@
   font-size: 0.95rem;
   padding: 0.5rem 1rem;
   background: linear-gradient(135deg, #d4af37 0%, #f4e4a6 100%);
-  color: #333;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   border-radius: 6px;
   transition: all 0.2s ease;
 }
