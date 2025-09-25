@@ -42,7 +42,7 @@ a:hover {
 }
 
 .nav-card {
-  background: white;
+  background: var(--background);
   border: 2px solid var(--primary);
   border-radius: 8px;
   padding: 2rem;
