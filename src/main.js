@@ -25,12 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
           const href = this.getAttribute('href');
           let target = null;
-          if (href && href.startsWith('#')) {
-            try {
-              target = document.querySelector(href);
-            } catch (err) {
-              console.error('Invalid selector for smooth scroll:', href, err);
-            }
+          try {
+            target = document.querySelector(href);
+          } catch (err) {
+            console.error('Invalid selector for smooth scroll:', href, err);
           }
           if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
