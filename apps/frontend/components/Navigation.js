@@ -17,7 +17,7 @@ const Navigation = () => {
     <nav className={styles.navigation}>
       <div className={styles.container}>
         <div className={styles.brand}>
-          <Link href="https://ifreedmen.com" className={styles.brandLink}>
+          <Link href="/" className={styles.brandLink}>
             <span className={styles.brandText}>iFreedmen</span>
           </Link>
         </div>
