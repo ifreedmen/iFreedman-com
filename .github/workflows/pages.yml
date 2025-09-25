@@ -52,9 +52,7 @@ jobs:
         
       - name: Build with Next.js
         run: npm run build
-        env:
-          PUBLIC_BASE_URL: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && 'https://ifreedmen.com' || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
-          
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
