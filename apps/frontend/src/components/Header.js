@@ -16,9 +16,13 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="https://ifreedmen.com" className={styles.logo}>
+        <a
+          href="https://ifreedmen.com"
+          className={styles.logo}
+          target="_self"
+        >
           iFreedmen
-        </Link>
+        </a>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
             {navLinks.map((link) => (
