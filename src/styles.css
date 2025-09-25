@@ -1,14 +1,5 @@
 /* Global styles for iFreedmen Creative Suite */
 
-:root {
-  --primary: #2c5530;
-  --secondary: #8b4513;
-  --accent: #d4af37;
-  --background: #ffffff;
-  --text: #2c2c2c;
-  --muted: #6c757d;
-}
-
 * {
   margin: 0;
   padding: 0;
