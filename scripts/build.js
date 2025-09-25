@@ -3,7 +3,7 @@ const path = require('path');
 
 const BRAND_CONFIG_PATH = './config/brand.json';
 // Load brand configuration
-let brandConfig;
+let brandConfig = null;
   try {
     brandConfig = JSON.parse(fs.readFileSync(BRAND_CONFIG_PATH, 'utf8'));
   } catch (err) {
