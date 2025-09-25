@@ -23,7 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
       internalLinks.forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const href = this.getAttribute('href');
+          let target = null;
+          if (href && href.startsWith('#')) {
+            try {
+              target = document.querySelector(href);
+            } catch (err) {
+              console.error('Invalid selector for smooth scroll:', href, err);
+            }
+          }
           if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
           }
