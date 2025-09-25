@@ -5,7 +5,7 @@ const compression = require('compression');
 const rateLimit = require('express-rate-limit');
 
 // Import routes
-const healthRoute = require('./routes/health');
+const healthRoute = require('./routes/health-route');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
