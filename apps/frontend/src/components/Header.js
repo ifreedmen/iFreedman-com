@@ -26,8 +26,8 @@ export default function Header() {
                 <a
                   href={link.href}
                   className={styles.navLink}
-                  target={link.href.startsWith('https://ifreedmen.com') ? '_self' : '_blank'}
-                  rel={link.href.startsWith('https://ifreedmen.com') ? undefined : 'noopener noreferrer'}
+                  target={link.href === 'https://ifreedmen.com' ? '_self' : '_blank'}
+                  rel={link.href === 'https://ifreedmen.com' ? undefined : 'noopener noreferrer'}
                 >
                   {link.label}
                 </a>
