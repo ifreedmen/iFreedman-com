@@ -1,13 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
+const BRAND_CONFIG_PATH = './config/brand.json';
 // Load brand configuration
 let brandConfig;
-try {
-  brandConfig = JSON.parse(fs.readFileSync('./config/brand.json', 'utf8'));
-} catch (err) {
-  console.error('❌ Failed to load brand configuration from ./config/brand.json.');
-  console.error('Reason:', err.message);
+  try {
+    brandConfig = JSON.parse(fs.readFileSync(BRAND_CONFIG_PATH, 'utf8'));
+  } catch (err) {
+    console.error(`❌ Failed to load brand configuration from ${BRAND_CONFIG_PATH}.`);
+    console.error('Reason:', err.message);
   process.exit(1);
 }
 
