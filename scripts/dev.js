@@ -14,7 +14,7 @@ buildProcess.on('close', (code) => {
     console.log('🌐 Starting local server on http://localhost:3000');
     
     // Start the HTTP server
-    const serverProcess = spawn('npx', ['http-server', 'public', '-p', '3000', '-o'], {
+    const serverProcess = spawn('npm', ['exec', 'http-server', 'public', '-p', '3000', '-o'], {
       stdio: 'inherit',
       cwd: process.cwd()
     });
