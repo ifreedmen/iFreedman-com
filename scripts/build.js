@@ -160,7 +160,10 @@ fs.writeFileSync('./public/index.html', html);
 
 // Copy static assets (CSS, JS, images) from src to public
 function copyStaticAssets(srcDir, destDir) {
-    const assetExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp', '.woff', '.woff2', '.ttf', '.eot', '.mp4', '.webm', '.ogg', '.mp3', '.wav'];
+    const assetExtensions = Array.isArray(brandConfig.assetExtensions) ? brandConfig.assetExtensions : [];
+    if (assetExtensions.length === 0) {
+        console.warn('⚠️ No assetExtensions defined in brand configuration. No static assets will be copied.');
+    }
     if (!fs.existsSync(srcDir)) return;
     const entries = fs.readdirSync(srcDir, { withFileTypes: true });
     for (const entry of entries) {
