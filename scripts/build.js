@@ -158,6 +158,26 @@ const html = `<!DOCTYPE html>
 // Write the HTML file
 fs.writeFileSync('./public/index.html', html);
 
+// Copy static assets (CSS, JS, images) from src to public
+function copyStaticAssets(srcDir, destDir) {
+    const assetExtensions = ['.css', '.js', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp', '.woff', '.woff2', '.ttf', '.eot', '.mp4', '.webm', '.ogg', '.mp3', '.wav'];
+    if (!fs.existsSync(srcDir)) return;
+    const entries = fs.readdirSync(srcDir, { withFileTypes: true });
+    for (const entry of entries) {
+        const srcPath = path.join(srcDir, entry.name);
+        const destPath = path.join(destDir, entry.name);
+        if (entry.isDirectory()) {
+            if (!fs.existsSync(destPath)) {
+                fs.mkdirSync(destPath, { recursive: true });
+            }
+            copyStaticAssets(srcPath, destPath);
+        } else if (assetExtensions.includes(path.extname(entry.name).toLowerCase())) {
+            fs.copyFileSync(srcPath, destPath);
+        }
+    }
+}
+
+copyStaticAssets('./src', './public');
 console.log('✅ Site built successfully!');
 console.log('📁 Output: ./public/index.html');
 console.log('🌐 Navigation links configured for:', brandConfig.navigation.map(n => n.url).join(', '));
