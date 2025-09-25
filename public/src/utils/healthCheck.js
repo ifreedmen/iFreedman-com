@@ -18,7 +18,6 @@ export async function fetchHealthStatus() {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',
       },
       signal: controller.signal,
     });
