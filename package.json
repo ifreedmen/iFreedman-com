@@ -1,15 +1,17 @@
 {
-  "name": "ifreedmen-creative-suite-collection",
+  "name": "ifreedmen-flagship-website",
   "version": "1.0.0",
   "description": "Flagship hub for the iFreedmen Creative Suite: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens.",
-  "main": "create-repos.js",
+  "main": "public/index.html",
+  "type": "module",
   "scripts": {
-    "help": "node create-repos.js",
+    "dev": "python3 -m http.server 3000 --directory public",
+    "build": "node scripts/build.js",
+    "preview": "python3 -m http.server 4000 --directory dist",
+    "test": "echo 'No tests specified' && exit 0",
     "guide": "node create-repos.js instructions",
     "generate": "node create-repos.js all",
     "html": "node create-repos.js html && echo 'Open repo-creation-helper.html in your browser'",
-    "markdown": "node create-repos.js markdown",
-    "validate": "node -c create-repos.js && echo 'Scripts are valid'",
     "enhanced": "node enhanced-setup.js enhanced",
     "stable-preview": "node enhanced-setup.js all-enhanced",
     "templates": "node enhanced-setup.js templates"
