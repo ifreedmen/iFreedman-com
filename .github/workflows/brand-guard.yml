@@ -1,0 +1,113 @@
+name: Brand Guard
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  brand-guard:
+    name: Check Brand/Domain Tokens
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Run Brand Guard Check
+      run: |
+        #!/bin/bash
+        set -e
+        
+        echo "🛡️ Running Brand Guard Check..."
+        
+        # Colors for output
+        RED='\033[0;31m'
+        GREEN='\033[0;32m'
+        YELLOW='\033[1;33m'
+        NC='\033[0m' # No Color
+        
+        # Initialize counters
+        error_count=0
+        
+        # Function to check for forbidden patterns
+        check_forbidden_patterns() {
+            local file="$1"
+            local line_num=0
+            
+            while IFS= read -r line; do
+                line_num=$((line_num + 1))
+                
+                # Check for forbidden patterns
+                if echo "$line" | grep -qE "(^|[^a-zA-Z])ifreemen([^a-zA-Z]|$)"; then
+                    echo -e "${RED}❌ FORBIDDEN: 'ifreemen' found in $file:$line_num${NC}"
+                    echo "    Line: $line"
+                    error_count=$((error_count + 1))
+                fi
+                
+                if echo "$line" | grep -qE "(^|[^a-zA-Z])iFreemen([^a-zA-Z]|$)"; then
+                    echo -e "${RED}❌ FORBIDDEN: 'iFreemen' found in $file:$line_num${NC}"
+                    echo "    Line: $line"
+                    error_count=$((error_count + 1))
+                fi
+                
+                if echo "$line" | grep -qE "(^|[^a-zA-Z])ifreeman([^a-zA-Z]|$)"; then
+                    echo -e "${RED}❌ FORBIDDEN: 'ifreeman' found in $file:$line_num${NC}"
+                    echo "    Line: $line"
+                    error_count=$((error_count + 1))
+                fi
+                
+                if echo "$line" | grep -qE "@ifreemen[-/]"; then
+                    echo -e "${RED}❌ FORBIDDEN: '@ifreemen[-/]' pattern found in $file:$line_num${NC}"
+                    echo "    Line: $line"
+                    error_count=$((error_count + 1))
+                fi
+                
+                if echo "$line" | grep -qE "https://ifreemen\."; then
+                    echo -e "${RED}❌ FORBIDDEN: 'https://ifreemen.*' pattern found in $file:$line_num${NC}"
+                    echo "    Line: $line"
+                    error_count=$((error_count + 1))
+                fi
+                
+            done < "$file"
+        }
+        
+        echo "Checking all text files for forbidden brand/domain tokens..."
+        
+        # Find all text files (excluding binary files, .git, node_modules, etc.)
+        find . -type f \( -name "*.md" -o -name "*.txt" -o -name "*.js" -o -name "*.json" -o -name "*.yml" -o -name "*.yaml" -o -name "*.html" -o -name "*.css" -o -name "*.sh" \) \
+            -not -path "./.git/*" \
+            -not -path "./node_modules/*" \
+            -not -path "./dist/*" \
+            -not -path "./.next/*" | while read -r file; do
+            
+            echo "Checking: $file"
+            check_forbidden_patterns "$file"
+        done
+        
+        # Summary
+        echo ""
+        if [ $error_count -eq 0 ]; then
+            echo -e "${GREEN}✅ Brand Guard Check PASSED - No forbidden tokens found${NC}"
+            echo ""
+            echo -e "${GREEN}✅ Allowed patterns:${NC}"
+            echo "   - iFreedmen (correct spelling)"
+            echo "   - ifreedmen.* (lowercase domains)" 
+            echo "   - @ifreedmen/* (social handles)"
+        else
+            echo -e "${RED}❌ Brand Guard Check FAILED - Found $error_count forbidden token(s)${NC}"
+            echo ""
+            echo -e "${YELLOW}ℹ️ Only these patterns are allowed:${NC}"
+            echo "   - iFreedmen (correct spelling)"
+            echo "   - ifreedmen.* (lowercase domains)"
+            echo "   - @ifreedmen/* (social handles)"
+            echo ""
+            echo -e "${YELLOW}ℹ️ Forbidden patterns found:${NC}"
+            echo "   - ifreemen (missing 'd')"
+            echo "   - iFreemen (missing 'd')" 
+            echo "   - ifreeman (missing 'd' and 'n')"
+            echo "   - @ifreemen[-/] (incorrect social patterns)"
+            echo "   - https://ifreemen.* (incorrect domain)"
+            exit 1
+        fi
