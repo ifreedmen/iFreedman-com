@@ -14,7 +14,11 @@ buildProcess.on('close', (code) => {
     console.log('🌐 Starting local server on http://localhost:3000');
     
     // Start the HTTP server
-    const serverProcess = spawn('npm', ['exec', 'http-server', 'public', '-p', '3000', '-o'], {
+    // To open browser automatically, set OPEN_BROWSER=1 in environment or pass --open as argument
+    const openBrowser = process.env.OPEN_BROWSER === '1' || process.argv.includes('--open');
+    const serverArgs = ['exec', 'http-server', 'public', '-p', '3000'];
+    if (openBrowser) serverArgs.push('-o');
+    const serverProcess = spawn('npm', serverArgs, {
       stdio: 'inherit',
       cwd: process.cwd()
     });
