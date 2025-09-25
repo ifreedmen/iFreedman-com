@@ -4,6 +4,32 @@
 
 > **Flagship hub for the iFreedmen Creative Suite**: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens and **stable preview functionality**.
 
+## 🌐 Live Frontend Application
+
+The flagship iFreedmen website is now live at `/apps/frontend` with a Next.js application featuring:
+
+- **Global Navigation**: Header navigation linking all iFreedmen domains and subdomains
+- **Responsive Design**: Mobile-first design with full accessibility support
+- **Static Export**: GitHub Pages deployment ready
+
+### Quick Start (Frontend)
+
+```bash
+# Navigate to frontend app
+cd apps/frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+See [apps/frontend/README.md](apps/frontend/README.md) for detailed frontend documentation.
+
 ## Official Logo
 
 ![iFreedmen Official Logo](iFreedmen-logo-official.png)

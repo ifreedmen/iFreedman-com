@@ -1,0 +1,21 @@
+{
+  "name": "ifreedmen-frontend",
+  "version": "1.0.0",
+  "description": "Flagship hub for the iFreedmen Creative Suite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build",
+    "start": "next start",
+    "preview": "npx serve dist -s -l 3000"
+  },
+  "keywords": ["ifreedmen", "next.js", "flagship"],
+  "author": "iFreedmen",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^14.2.33",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
