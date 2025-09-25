@@ -125,10 +125,52 @@ npm run dev          # Start development server
 npm run build        # Build for production
 npm run preview      # Preview the built site
 
+# API Gateway
+npm run api          # Start API server on port 3000
+npm test            # Run health endpoint tests
+
 # Deployment (automatic via GitHub Actions)
 # 1. Push to main branch = auto-deploy to production
 # 2. Create PR = auto-build for preview/validation
 ```
+
+## 🚀 API Gateway
+
+The Creative Suite includes an API Gateway with health monitoring capabilities:
+
+### Health Endpoint
+
+```bash
+# Start the API server
+npm run api
+
+# Test health endpoint
+curl http://localhost:3000/health
+```
+
+**Response Format (HealthCheck type):**
+```json
+{
+  "status": "healthy",
+  "service": "iFreedmen Creative Suite API Gateway", 
+  "timestamp": 1758783357,
+  "version": "1.0.0",
+  "details": {
+    "uptime": 18,
+    "memory": { "rss": 53276672, "heapTotal": 7577600, ... },
+    "environment": "development"
+  }
+}
+```
+
+### API Endpoints
+
+- `GET /health` - Service health status using shared HealthCheck type
+- `GET /` - API information and available endpoints
+
+### Shared Types
+
+The API uses shared HealthCheck types (`api/types.js`) that can be used across all Creative Suite repositories for consistent health reporting.
 
 ## 📚 Architecture Documentation
 

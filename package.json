@@ -12,7 +12,9 @@
     "validate": "node -c create-repos.js && echo 'Scripts are valid'",
     "enhanced": "node enhanced-setup.js enhanced",
     "stable-preview": "node enhanced-setup.js all-enhanced",
-    "templates": "node enhanced-setup.js templates"
+    "templates": "node enhanced-setup.js templates",
+    "api": "node api/server.js",
+    "test": "node test/test-health.js"
   },
   "keywords": [
     "ifreedmen",
@@ -30,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-/issues"
   },
-  "homepage": "https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-#readme"
+  "homepage": "https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
