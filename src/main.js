@@ -4,7 +4,7 @@ let brandConfig = {};
 
 // Initialize navigation tracking after loading brand config
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('/config/brand.json')
+  fetch('./config/brand.json')
     .then(response => response.json())
     .then(config => {
       brandConfig = config;
