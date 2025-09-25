@@ -1,8 +1,9 @@
-# iFreedmen Creative Suite Collection 🎨
+# iFreedmen Creative Suite 🎨
 
-[![Repository Creation Status](https://img.shields.io/badge/status-ready%20for%20creation-green.svg)](https://github.com/ifreedmen/iFreedman.com-iFreedmen-Creative-Suite-Collection-)
+[![Website Status](https://img.shields.io/badge/website-live-green.svg)](https://ifreedmen.github.io/iFreedman-com/)
+[![Health Check](https://img.shields.io/badge/health%20check-active-blue.svg)](https://status.ifreedmen.com)
 
-> **Flagship hub for the iFreedmen Creative Suite**: sovereignty, culture, commerce, and communications. Links to .net/.info/.shop/.store. Pages-ready scaffold with shared brand tokens and **stable preview functionality**.
+> **Flagship hub for the iFreedmen Creative Suite**: sovereignty, culture, commerce, and communications. Features a real-time status promo tile showing backend health from api.ifreedmen.com/health.
 
 ## Official Logo
 
@@ -10,31 +11,75 @@
 
 **Important**: The `iFreedmen-logo-official.png` logo must be used for all internal and external correspondence. This is the official logo with proper transparent background and optimized formatting for professional use.
 
-## 🚀 Quick Start for Repository Creation
+## 🎯 Website Features
 
-### Enhanced Setup with Stable Previews
+The flagship iFreedmen website now includes:
+
+- **Status Promo Tile**: Real-time health monitoring from `api.ifreedmen.com/health`
+  - Links to [status.ifreedmen.com](https://status.ifreedmen.com) 
+  - Graceful fallbacks when API is unavailable
+  - Visual indicators for health status (healthy/degraded/down/unavailable)
+- **Creative Suite Navigation**: Direct links to all ecosystem sites
+- **Responsive Design**: Modern, accessible interface
+- **GitHub Pages Ready**: Automated deployment pipeline
+
+## 🚀 Quick Start
+
+### Development
+```bash
+# Install dependencies (optional - no external deps required)
+npm install
+
+# Start local development server
+npm run dev
+
+# Open http://localhost:3000 in your browser
+```
+
+### Building for Production
+```bash
+# Build the site
+npm run build
+
+# Preview the built site
+npm run preview
+
+# Open http://localhost:4000 to preview
+```
+
+## 📊 Status Tile Implementation
+
+The status tile uses the shared HealthCheck utility:
+
+```javascript
+import { fetchHealthStatus } from './src/utils/healthCheck.js';
+
+// Fetches from api.ifreedmen.com/health with 5-second timeout
+const health = await fetchHealthStatus();
+```
+
+**Features:**
+- ✅ Automatic fallback to mock data when API unavailable
+- ✅ Visual status indicators with color coding  
+- ✅ Click-to-navigate to status.ifreedmen.com
+- ✅ Responsive design matching site aesthetics
+- ✅ Loading states and error handling
+
+## 🌟 Enhanced Repository Creation Tools
+
+The repository also includes tools for creating the other Creative Suite repositories:
+
+### Repository Creation Tools
 ```bash
 # Get enhanced setup instructions with stable preview functionality
 npm run stable-preview
 
-# Or generate individual components
+# Or generate individual components  
 npm run enhanced      # Enhanced instructions only
 npm run templates     # Template documentation only
+npm run guide         # Traditional repository creation guide
+npm run html          # Generate HTML helper form
 ```
-
-### Traditional Setup
-```bash
-# Traditional repository creation guide
-npm run guide
-
-# Generate HTML helper form
-npm run html
-
-# Generate all traditional files
-npm run generate
-```
-
-## 🌟 New: Stable Preview Pages During Editing
 
 This enhanced version ensures **stable and consistent preview pages** for all repositories:
 
@@ -42,14 +87,7 @@ This enhanced version ensures **stable and consistent preview pages** for all re
 ✅ **PR Preview Builds**: Pull requests automatically build and validate changes  
 ✅ **Build Status Comments**: PRs get automatic status updates with build results  
 ✅ **Local Development Servers**: Consistent dev environment across all repos  
-✅ **Auto-deployment**: Main branch pushes automatically deploy to production  
-
-### Key Improvements for Stability
-
-1. **Enhanced GitHub Actions Workflow**: Uses Node.js 20 with caching for consistent builds
-2. **Preview Support**: PRs build and validate before deployment
-3. **Template System**: Standardized configurations ensure consistency
-4. **Development Workflow**: Same commands work across all repositories
+✅ **Auto-deployment**: Main branch pushes automatically deploy to production
 
 ## 📁 Repository Structure
 
